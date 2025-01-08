@@ -85,10 +85,10 @@
             .then(comments => {
                 const commentsSection = document.getElementById('comments-section');
                 commentsSection.innerHTML = ''; // Limpiar la sección de comentarios
-                comments.forEach(comment => {
+                comments.forEach(commentObj => {
                     const commentDiv = document.createElement('div');
                     commentDiv.classList.add('comment-box');
-                    commentDiv.textContent = `- ${comment}`;
+                    commentDiv.textContent = `- ${commentObj.comment}`;  // Mostrar solo el comentario
                     commentsSection.appendChild(commentDiv);
                 });
             });
