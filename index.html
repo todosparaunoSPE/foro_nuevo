@@ -6,8 +6,8 @@
     <title>Foro Comunitario de Pensionissste</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
             margin: 0;
             padding: 0;
             display: flex;
@@ -25,23 +25,12 @@
         }
         h1 {
             color: #0072B1;
-            font-size: 2em;
-            text-align: center;
         }
-        h2 {
-            color: #333;
-            margin-top: 30px;
-        }
-        p {
-            font-size: 1.1em;
-            color: #555;
-        }
-        .comment-box {
-            background-color: #f8f8f8;
-            border-left: 5px solid #0072B1;
+        .question-box {
+            background-color: #f0f0f0;
+            border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
-            border-radius: 8px;
         }
         #comment-form {
             display: flex;
@@ -49,50 +38,13 @@
             margin-bottom: 20px;
         }
         #new-comment {
-            padding: 12px;
-            margin-bottom: 15px;
+            padding: 10px;
+            margin-bottom: 10px;
             font-size: 16px;
             border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: #f9f9f9;
+            border-radius: 5px;
         }
         #submit-btn {
-            padding: 12px 25px;
-            background-color: #0072B1;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        #submit-btn:hover {
-            background-color: #005f8c;
-        }
-        .questionnaire {
-            background-color: #f8f8f8;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 30px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .questionnaire h3 {
-            margin-bottom: 15px;
-            color: #0072B1;
-        }
-        .questionnaire label {
-            font-size: 1.1em;
-            margin-top: 10px;
-            display: block;
-        }
-        .questionnaire textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 8px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            resize: vertical;
-        }
-        .questionnaire button {
             padding: 10px 20px;
             background-color: #0072B1;
             color: white;
@@ -100,7 +52,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .questionnaire button:hover {
+        #submit-btn:hover {
             background-color: #005f8c;
         }
     </style>
@@ -111,9 +63,27 @@
     <h1>💬 Foro Comunitario de Pensionissste</h1>
     <p>¡Bienvenidos al foro de PENSIONISSSTE! Este es un espacio creado para que puedas compartir tus experiencias, resolver dudas y aprender más sobre cómo aprovechar al máximo tu ahorro para el retiro.</p>
 
+    <!-- Preguntas -->
+    <div class="question-box">
+        <p><strong>1. ¿Cómo consideras que el sistema de pensiones actual está ayudando a los trabajadores a planificar su retiro?</strong></p>
+    </div>
+    <div class="question-box">
+        <p><strong>2. ¿Has tenido alguna experiencia positiva o negativa con tu fondo de pensiones? Cuéntanos más.</strong></p>
+    </div>
+    <div class="question-box">
+        <p><strong>3. ¿Qué mejoras sugerirías para el sistema de pensiones en México?</strong></p>
+    </div>
+    <div class="question-box">
+        <p><strong>4. ¿Estás satisfecho con el rendimiento de tu fondo de pensiones hasta el momento? ¿Por qué?</strong></p>
+    </div>
+    <div class="question-box">
+        <p><strong>5. ¿Qué factores consideras más importantes para elegir el fondo de pensiones adecuado?</strong></p>
+    </div>
+
+    <!-- Formulario para comentar -->
     <div id="comment-form">
-        <label for="new-comment">👉 Cuéntanos un poco sobre tu experiencia con el sistema de pensiones:</label>
-        <textarea id="new-comment" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+        <label for="new-comment">👉 Comparte tus comentarios sobre las preguntas anteriores:</label>
+        <textarea id="new-comment" rows="6" placeholder="Escribe tu comentario aquí..."></textarea>
         <button id="submit-btn">Agregar Comentario</button>
     </div>
 
@@ -121,35 +91,6 @@
     <div id="comments-section">
         <!-- Los comentarios se agregarán aquí -->
     </div>
-
-    <div class="questionnaire">
-        <h3>💬 Responde a estas preguntas sobre tu experiencia con el sistema de pensiones:</h3>
-        <form>
-            <label for="q1">1. ¿Qué tan satisfecho(a) estás con la información que recibes sobre tu cuenta de pensiones?</label>
-            <textarea id="q1" rows="2" placeholder="Escribe tu respuesta..."></textarea>
-
-            <label for="q2">2. ¿Consideras que las aportaciones son suficientes para tu retiro?</label>
-            <textarea id="q2" rows="2" placeholder="Escribe tu respuesta..."></textarea>
-
-            <label for="q3">3. ¿Has tenido algún problema o dificultad para acceder a tu información de pensiones?</label>
-            <textarea id="q3" rows="2" placeholder="Escribe tu respuesta..."></textarea>
-
-            <label for="q4">4. ¿Qué mejoras te gustaría que se implementaran en el sistema de pensiones?</label>
-            <textarea id="q4" rows="2" placeholder="Escribe tu respuesta..."></textarea>
-
-            <label for="q5">5. ¿Sientes que el sistema de pensiones te ayuda a planificar tu futuro financiero?</label>
-            <textarea id="q5" rows="2" placeholder="Escribe tu respuesta..."></textarea>
-
-            <label for="q6">6. ¿Te gustaría que existiera mayor variedad en los planes de ahorro para el retiro?</label>
-            <textarea id="q6" rows="2" placeholder="Escribe tu respuesta..."></textarea>
-
-            <label for="q7">7. ¿Recomendarías a otros confiar en el sistema de pensiones para su retiro?</label>
-            <textarea id="q7" rows="2" placeholder="Escribe tu respuesta..."></textarea>
-
-            <button type="submit">Enviar Respuestas</button>
-        </form>
-    </div>
-
 </div>
 
 <script>
